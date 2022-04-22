@@ -1,0 +1,73 @@
+{
+  "builders": [
+    {
+      "CPUs": 4,
+      "RAM": 4096,
+      "boot_command": [
+        "<esc><esc><esc><esc>e<wait>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "<del><del><del><del><del><del><del><del>",
+        "linux /casper/vmlinuz --- autoinstall ds=\"nocloud-net;seedfrom=http://{{.HTTPIP}}:{{.HTTPPort}}/\"<enter><wait>",
+        "initrd /casper/initrd<enter><wait>",
+        "boot<enter>",
+        "<enter><f10><wait>"
+      ],
+	  
+      "boot_wait": "3s",
+      "cluster": "{{ user `cluster` }}",
+      "convert_to_template": true,
+      "datastore": "{{ user `datastore` }}",
+      "folder": "Templates",	  
+      "disk_controller_type": "pvscsi",
+      "guest_os_type": "ubuntu64Guest",
+      "http_directory": "./http",
+      "insecure_connection": "true",
+      "iso_checksum": "sha256:84aeaf7823c8c61baa0ae862d0a06b03409394800000b3235854a6b38eb4856f",
+      "iso_urls": [
+        "iso/ubuntu-22.04-live-server-amd64.iso",
+        "https://releases.ubuntu.com/22.04/ubuntu-22.04-live-server-amd64.iso"
+      ],
+      
+      "network_adapters": [
+        {
+          "network": "{{ user `network` }}",
+          "network_card": "vmxnet3"
+        }
+      ],
+      "password": "{{ user `password` }}",
+      "shutdown_command": "sudo shutdown -P now",
+      "ssh_username": "ubuntu",
+      "ssh_password": "ubuntu",
+      "ssh_handshake_attempts": "100",	  
+	  "ssh_timeout": "20m",
+      "ssh_port": 22,
+      
+      "storage": [
+        {
+          "disk_size": 40960,
+          "disk_thin_provisioned": true
+        }
+      ],
+      "type": "vsphere-iso",
+      "username": "{{ user `username` }}",
+      "vcenter_server": "{{ user `vcenter_server` }}",
+      "vm_name": "{{ user `vm_name` }}"
+	 
+	  
+    }
+  ]
+  
+	
+}

@@ -15,3 +15,4 @@
     "disk_size": "102400",
     "os_iso_path": "[vsanDatastore] ISO/en_windows_server_2022_preview_x64_dvd_3bd1e657.iso",
     "vmtools_iso_path":"[vsanDatastore] ISO/windows.iso"
+}

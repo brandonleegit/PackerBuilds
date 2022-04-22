@@ -1,0 +1,12 @@
+{
+    "vcenter_server":"vcsa.cloud.local",
+    "username":"administrator@vsphere.local",
+    "password":"secretpassword",
+    "datastore":"vsanDatastore",
+    "folder": "Templates",
+	"vm_name": "ubuntu2204_template",
+    "host":"10.1.149.14",
+    "cluster": "vsancluster",
+    "network": "DPG-Servers",
+   
+}
