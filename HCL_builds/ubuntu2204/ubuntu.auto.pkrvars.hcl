@@ -1,0 +1,15 @@
+vsphere_server = "vcsa.cloud.local"
+vsphere_user = "administrator@vsphere.local"
+vsphere_password = "password"
+vsphere_template_name = "ubuntu2204_template"
+vsphere_folder = "Templates"
+vsphere_dc_name = "CloudLocal"
+cluster = "vsancluster"
+vsphere_host = "esx1.cloud.local"
+vsphere_portgroup_name = "DPG-Servers"
+vsphere_datastore = "vsanDatastore"
+cpu_num = 4
+mem_size = 4096
+disk_size = 40960
+vmtools_iso_path = "[vsanDatastore] ISO/windows.iso"
+vm_disk_controller_type = ["pvscsi"]
