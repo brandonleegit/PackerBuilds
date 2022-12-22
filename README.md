@@ -1,5 +1,5 @@
 # PackerBuilds
-Packer build files for automated operating system template builds
+Packer build files for automated operating system template builds in a VMware vSphere environment, using both the older .JSON code as well as the newer .HCL format.
 
 ## HCL Builds
 
