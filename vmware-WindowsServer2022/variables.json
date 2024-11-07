@@ -1,0 +1,18 @@
+{
+    "vsphere_server": "vcsa.cloud.local",
+    "vsphere_user": "administrator@vsphere.local",
+    "vsphere_password": "Secretpassword",
+    "vsphere_template_name": "Win2022clone_withupdates",
+    "vsphere_folder": "Templates",
+    "vsphere_dc_name": "CloudLocal",
+    "vsphere_compute_cluster": "vsancluster",
+    "vsphere_host": "10.1.149.14",
+    "vsphere_portgroup_name": "DPG-Servers",
+    "vsphere_datastore": "vsanDatastore",
+    "winadmin_password": "Secretpassword",
+    "cpu_num": "4",
+    "mem_size": "4096",
+    "disk_size": "102400",
+    "os_iso_path": "[vsanDatastore] ISO/en_windows_server_2022_preview_x64_dvd_3bd1e657.iso",
+    "vmtools_iso_path":"[vsanDatastore] ISO/windows.iso"
+}
