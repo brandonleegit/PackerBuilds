@@ -1,0 +1,17 @@
+vsphere_server = "vcsa.mydomain.com"
+vsphere_user = "administrator@vsphere.local"
+vsphere_password = "mypassword"
+vsphere_template_name = "Win2022clonetemplate"
+vsphere_folder = "Templates"
+vsphere_dc_name = "My DC"
+vsphere_compute_cluster = "mycluster"
+vsphere_host = "host.mydomain.com"
+vsphere_portgroup_name = "portgroup"
+vsphere_datastore = "datastore"
+winadmin_password = "mypassword"
+cpu_num = 4
+mem_size = 4096
+disk_size = 102400
+os_iso_path = "[datastore] ISO/en-us_windows_server_2022_updated_sep_2024_x64_dvd_cab4e960 (replace with your downloaded ISO).iso"
+vmtools_iso_path = "[datastore] ISO/windows.iso"
+vm_disk_controller_type = ["pvscsi"]
