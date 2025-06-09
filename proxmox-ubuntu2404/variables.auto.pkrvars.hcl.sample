@@ -1,0 +1,6 @@
+proxmox_api_url = "https://10.1.149.199:8006/api2/json"
+proxmox_api_token_id = "root@pam!testtoken"
+proxmox_api_token_secret  =  "de7cd80c-cf3c-43fc-bd26-df6cf3b9c98c"
+proxmox_node = "pvetest82"
+ssh_username = "ubuntu" # the user has to be changed from ubuntu if you want to user password login
+ssh_password = "ubuntu"
