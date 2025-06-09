@@ -21,4 +21,4 @@ To generate the hashed password on linux we can use mkpasswd (part of whois pack
 Now we have only to launch the build, it should take about 10 minutes, you can see the progress in the proxmox screen.
 
     packer init . 
-    packer build -var-file=secret.pkrvars.hcl .
+    packer build .
