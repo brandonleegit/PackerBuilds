@@ -1,4 +1,3 @@
-
 variable "proxmox_api_url" {
   type = string
   default = "https://10.1.149.199:8006/api2/json"
@@ -15,3 +14,14 @@ variable "proxmox_api_token_secret" {
   sensitive = true
 }
 
+variable "proxmox_node" {
+  type = string
+}
+
+variable "ssh_username" {
+  type = string
+}
+
+variable "ssh_password" {
+  type = string
+}

@@ -24,20 +24,23 @@ source "proxmox-iso" "ubuntu-server-noble-numbat" {
     insecure_skip_tls_verify = true
     
     # VM General Settings
-    node = "pvetest82"
+    node = "${var.proxmox_node}"
     vm_id = "199"
     vm_name = "ubuntu-server-noble-numbat"
     template_description = "Noble Numbat"
 
     # VM OS Settings
-    # (Option 1) Local ISO File
-    iso_file = "local:iso/ubuntu-24.04-live-server-amd64.iso"
-    # - or -
-    # (Option 2) Download ISO
-    # iso_url = "https://releases.ubuntu.com/22.04/ubuntu-22.04-live-server-amd64.iso"
-    # iso_checksum = "84aeaf7823c8c61baa0ae862d0a06b03409394800000b3235854a6b38eb4856f"
-    iso_storage_pool = "local"
-    unmount_iso = true
+    boot_iso {
+      type = "scsi"
+      # (Option 1) Local ISO File
+      iso_file = "local:iso/ubuntu-24.04.2-live-server-amd64.iso"
+      # (Option 2) Download ISO
+      # iso_url = "https://releases.ubuntu.com/24.04/ubuntu-24.04.2-live-server-amd64.iso"
+      unmount = true
+      iso_checksum = "sha512:33c08e56c83d13007e4a5511b9bf2c4926c4aa12fd5dd56d493c0653aecbab380988c5bf1671dbaea75c582827797d98c4a611f7fb2b131fbde2c677d5258ec9"
+      iso_storage_pool = "local"
+    }
+
     template_name        = "packer-ubuntu2404"
 
     # VM System Settings
@@ -89,10 +92,10 @@ source "proxmox-iso" "ubuntu-server-noble-numbat" {
     # http_port_min = 8802
     # http_port_max = 8802
 
-    ssh_username = "ubuntu"
+    ssh_username = "${var.ssh_username}"
 
-    # (Option 1) Add your Password here
-    ssh_password = "ubuntu"
+    # (Option 1) Add your Password here (if the user is ubuntu it will have login by password disabled by default)
+    ssh_password = "${var.ssh_password}"
     # - or -
     # (Option 2) Add your Private SSH KEY file here
     # ssh_private_key_file = "~/.ssh/id_rsa"
