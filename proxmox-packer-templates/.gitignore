@@ -1,0 +1,80 @@
+# Packer build artifacts
+*.box
+packer_cache/
+output-*/
+builds/
+
+# Packer logs
+packer.log
+packer_debug.log
+*.log
+
+# Sensitive variable files
+sensitive-variables.pkr.hcl
+*sensitive*
+*.secrets
+*.secret
+
+# Variable files that might contain sensitive data
+variables.auto.pkrvars.hcl
+*.auto.pkrvars.hcl
+terraform.tfvars
+*.tfvars
+
+# ISO files and large binaries
+*.iso
+*.img
+*.vmdk
+*.vdi
+*.qcow2
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# SSH keys
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Certificate files
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# Vagrant files
+.vagrant/
+*.vagrant
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node.js files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
